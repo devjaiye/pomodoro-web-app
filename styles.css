@@ -1,0 +1,15 @@
+.countdowntimer {
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	font-size: 100px;
+}
+
+h1, h2, p {
+	font-family: verdana;
+	text-align: center;
+}
+
+.countdownclock {
+	margin: auto;
+}
