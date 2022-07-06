@@ -17,3 +17,14 @@ h1, h2, p {
 .aligncenter {
 	text-align: center;
 }
+
+.button {
+	width: 200px;
+	height: 50px;
+	margin-top: 40px;
+}
+
+.wrapper {
+	text-align: center;
+
+}
