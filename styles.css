@@ -13,3 +13,7 @@ h1, h2, p {
 .countdownclock {
 	margin: auto;
 }
+
+.aligncenter {
+	text-align: center;
+}
