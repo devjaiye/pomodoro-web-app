@@ -1,21 +1,28 @@
 // JavaScript source code
 //let secondsValue = document.getElementById("seconds").innerHTML;
 
-/*let buttonText = "START";*/
-
 function startCountDown() {
     let button = document.getElementById("button").innerHTML;
+    let totalSeconds = 5;
+
     if(button=="START"){
         document.getElementById("button").innerHTML = "STOP";
-        //button = "STOP";
+        const x = setInterval(() => {
+            if (totalSeconds <= 0) {
+                clearInterval(x);
+            }
+            else{
+                totalSeconds--;
+                document.getElementById("seconds").innerHTML = totalSeconds;
+            }
+
+        }, 1000);
     }
     if (button=="STOP"){
         document.getElementById("button").innerHTML = "START";
-        //button = "START";
     }
-    /*let x = setInterval(function () {
-        while (secondsValue > 0) {
-            secondsValue = secondsValue - 1;
-        }
-    }, 1000);*/
 }
+
+let totalSeconds = document.getElementById("seconds").innerHTML;
+let tempSeconds = totalSeconds;
+
