@@ -1,14 +1,10 @@
-// JavaScript source code
-//let secondsValue = document.getElementById("seconds").innerHTML;
-let x;
-
-function startCountDown() {
-    let button = document.getElementById("button").innerHTML;
-    let totalSeconds = document.getElementById("seconds").innerHTML;
-
-    if(button==="START"){
+let intervalID;
+function startCountDown(buttonText = document.getElementById("button").innerHTML) {
+    let x;
+    if (buttonText === 'START') {
+        let totalSeconds = document.getElementById("seconds").innerHTML;
         document.getElementById("button").innerHTML = "STOP";
-        x = setInterval(() => {
+        intervalID = setInterval(() => {
             if (totalSeconds <= 0) {
                 clearInterval(x);
             }
@@ -18,9 +14,8 @@ function startCountDown() {
             }
         },1000);
     }
-    if (button==="STOP"){
-        clearInterval(x);
+    if (buttonText === "STOP"){
+        clearInterval(intervalID);
         document.getElementById("button").innerHTML = "START";
     }
 }
-
