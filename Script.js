@@ -1,7 +1,7 @@
 let intervalID;
 function startStopCountDown(buttonText = document.getElementById("button").innerHTML) {
     if (buttonText === 'START') {
-        let totalSeconds = document.getElementById("seconds").innerHTML;
+        let totalSeconds = 1500;
         document.getElementById("button").innerHTML = "STOP";
         intervalID = setInterval(() => {
             if (totalSeconds <= 0) {
