@@ -1,6 +1,6 @@
 let intervalID;
+let totalTime = document.getElementById("timer").innerHTML.substring(0, 2) * 60;
 function startStopCountDown(buttonText = document.getElementById("button").innerHTML) {
-    var totalTime = 1500;
     if (buttonText === 'START') {
 
         document.getElementById("button").innerHTML = "STOP";
