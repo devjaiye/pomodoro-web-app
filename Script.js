@@ -1,21 +1,25 @@
 let intervalID;
 function startStopCountDown(buttonText = document.getElementById("button").innerHTML) {
-    var startTime = 180;
-    var timeLeft = startTime;
-
+    var totalTime = 1500;
     if (buttonText === 'START') {
 
         document.getElementById("button").innerHTML = "STOP";
         intervalID = setInterval(() => {
-            if (timeLeft <= 0) {
+            if (totalTime <= 0) {
                 clearInterval(intervalID);
                 document.getElementById("button").innerHTML = "START";
             }
             else{
-                timeLeft--;
-                minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / 60);
-                seconds = timeLeft % 60;
-                document.getElementById("seconds").innerHTML = minutes + ":" + seconds;
+                totalTime--;
+                var minutes = Math.floor((totalTime % (1000 * 60 * 60)) / 60);
+                if (minutes < 10){
+                    minutes = "0" + minutes;
+                }
+                var seconds = totalTime % 60;
+                if (seconds < 10){
+                    seconds = "0" + seconds;
+                }
+                document.getElementById("timer").innerHTML = minutes + ":" + seconds;
             }
         },1000);
     }
