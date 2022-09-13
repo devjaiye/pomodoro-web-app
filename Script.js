@@ -2,7 +2,7 @@ let intervalID;
 let totalTime = document.getElementById("timer").innerHTML.substring(0, 2) * 60;
 function startStopCountDown(buttonText = document.getElementById("button").innerHTML) {
     if (buttonText === 'START') {
-        playWorkSound();
+        playWorkSound(totalTime);
         document.getElementById("button").innerHTML = "STOP";
         intervalID = setInterval(() => {
             if (totalTime <= 0) {
@@ -28,7 +28,9 @@ function startStopCountDown(buttonText = document.getElementById("button").inner
         document.getElementById("button").innerHTML = "START";
     }
 }
-function playWorkSound(){
-    var work = new Audio('Resources/work.mp3');
-    work.play();
+function playWorkSound(timeLeft){
+    if(timeLeft === 1500){
+        var work = new Audio('Resources/work.mp3');
+        work.play();
+    }
 }
