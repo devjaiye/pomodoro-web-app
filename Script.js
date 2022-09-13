@@ -30,7 +30,11 @@ function startStopCountDown(buttonText = document.getElementById("button").inner
 }
 function playWorkSound(timeLeft){
     if(timeLeft === 1500){
-        var work = new Audio('Resources/work.mp3');
+        var work = new Audio('resources/work.mp3');
         work.play();
     }
+}
+
+function starBreakCountDown(){
+
 }
