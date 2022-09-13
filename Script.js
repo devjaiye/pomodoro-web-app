@@ -6,25 +6,7 @@ function startStopCountDown(buttonText = document.getElementById("button").inner
     if (buttonText === 'START') {
         playWorkSound(totalTime);
         document.getElementById("button").innerHTML = "STOP";
-        intervalID = setInterval(() => {
-            if (totalTime <= 0) {
-                clearInterval(intervalID);
-                //document.getElementById("button").innerHTML = "START";
-                startBreakCountDown();
-            }
-            else{
-                totalTime--;
-                var minutes = Math.floor((totalTime % (1000 * 60 * 60)) / 60);
-                if (minutes < 10){
-                    minutes = "0" + minutes;
-                }
-                var seconds = totalTime % 60;
-                if (seconds < 10){
-                    seconds = "0" + seconds;
-                }
-                document.getElementById("timer").innerHTML = minutes + ":" + seconds;
-            }
-        },1000);
+        countDown();
     }
     if (buttonText === "STOP"){
         clearInterval(intervalID);
@@ -40,14 +22,23 @@ function playWorkSound(timeLeft){
 
 function startBreakCountDown(){
     document.getElementById("timer").innerHTML = "05:00";
-    let breakTime = 300;
+    totalTime = 300;
+    countDown();
+}
+
+function countDown(){
     intervalID = setInterval(() => {
-        breakTime--;
-        minutes = Math.floor((breakTime % (1000 * 60 * 60)) / 60);
+        if (totalTime <= 0) {
+            clearInterval(intervalID);
+            //document.getElementById("button").innerHTML = "START";
+            startBreakCountDown();
+        }
+        totalTime--;
+        minutes = Math.floor((totalTime % (1000 * 60 * 60)) / 60);
         if (minutes < 10){
             minutes = "0" + minutes;
         }
-         seconds = breakTime % 60;
+        seconds = totalTime % 60;
         if (seconds < 10){
             seconds = "0" + seconds;
         }
