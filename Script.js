@@ -19,14 +19,20 @@ function initialiseApp(buttonText = document.getElementById("button").innerHTML)
     }
 }
 function playWorkSound(){
-        var work = new Audio('resources/work.mp3');
-        work.play();
+    var work = new Audio('resources/work.mp3');
+    work.play();
+}
+
+function playBreakSound(){
+    var work = new Audio('resources/break.mp3');
+    work.play();
 }
 
 function startBreak(){
     breakMode = true;
     document.getElementById("timer").innerHTML = "05:00";
     totalTime = 300;
+    playBreakSound();
     countDown(breakMode);
 }
 
