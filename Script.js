@@ -37,7 +37,6 @@ function startBreak(){
 }
 
 function countDown(onABreak){
-    changeBgColor();
     if (onABreak){
         intervalID = setInterval(() => {
             if (totalTime <= 0) {
