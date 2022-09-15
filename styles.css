@@ -1,13 +1,15 @@
 body {
 	font-family: verdana;
 	text-align: center;
+	background: coral;
+	color: whitesmoke;
 }
 
 .countdowntimer {
-	border-style: solid;
-	border-color: black;
-	border-width: 2px;
+
+
 	font-size: 100px;
+	border-radius: 50%;
 }
 
 .countdownclock {
@@ -20,8 +22,10 @@ body {
 
 .button {
 	width: 400px;
-	height: 90px;	
+	height: 90px;
 	font-size: 50px;
+	color: whitesmoke;
+	background-color: brown;
 }
 
 .wrapper {
@@ -31,6 +35,16 @@ body {
 }
 
 img {
-	width: 30%;
-	height: 30%;
+	width: auto;
+	height: auto;
 }
+
+.circle{
+	margin: auto;
+	margin-top: 100px;
+	width: 200px;
+	height: 200px;
+	background: red;
+	border-radius: 50%
+}
+
