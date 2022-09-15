@@ -37,6 +37,7 @@ function startBreak(){
 }
 
 function countDown(onABreak){
+    changeBgColor();
     if (onABreak){
         intervalID = setInterval(() => {
             if (totalTime <= 0) {
@@ -82,9 +83,9 @@ function decrementTime(){
 
 function changeBgColor(){
     if (breakMode){
-        document.getElementById("timer").style.backgroundColor = "green"
+        document.getElementById("circle").style.backgroundColor = "green"
     }
     else {
-        document.getElementById("timer").style.backgroundColor = "red"
+        document.getElementById("circle").style.backgroundColor = "red"
     }
 }
