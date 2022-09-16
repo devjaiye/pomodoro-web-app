@@ -1,5 +1,5 @@
-body {
-	font-family: verdana;
+body, button {
+	font-family: "Maersk Text";
 	text-align: center;
 	background: coral;
 	color: whitesmoke;
@@ -22,7 +22,8 @@ body {
 	height: 90px;
 	font-size: 50px;
 	color: whitesmoke;
-	background-color: brown;
+	background-color: crimson;
+	border-radius: 10px;
 }
 
 .wrapper {
@@ -43,5 +44,9 @@ img {
 	height: 200px;
 	background: red;
 	border-radius: 50%
+}
+
+footer {
+	margin-bottom: 10px;
 }
 
